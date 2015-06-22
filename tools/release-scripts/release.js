@@ -78,9 +78,9 @@ function tagAndRelease() {
       repoRelease(bowerRepo, bowerRoot, tmpBowerRepo, version)
     ];
 
-    if (!argv.preid) {
-      releases.push(repoRelease(docsRepo, docsRoot, tmpDocsRepo, version));
-    }
+    // if (!argv.preid) {
+    //   releases.push(repoRelease(docsRepo, docsRoot, tmpDocsRepo, version));
+    // }
 
     return Promise.all(releases);
   }
@@ -109,7 +109,7 @@ preConditions()
   .then(v => { version = v; })
   .then(() => prepareRepo().catch(err => revertAndThrow(err)))
   .then(() => safeExec(`git commit -m "Release v${version}"`))
-  .then(() => tagAndRelease)
+  .then(tagAndRelease)
   .then(() => console.log('Version '.cyan + `v${version}`.green + ' released!'.cyan))
   .catch(err => {
     if (!err.__handled) {
