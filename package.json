@@ -1,0 +1,77 @@
+{
+  "name": "es6-prototype-proj",
+  "version": "0.0.1",
+  "description": "ES6 playgroung prototyping project",
+  "repository": {
+    "type": "git",
+    "url": "alexkval/es6-prototype-proj"
+  },
+  "homepage": "https://github.com/alexkval/es6-prototype-proj",
+  "scripts": {
+    "build": "babel-node tools/build-cli.js",
+    "test-watch": "karma start",
+    "test-coverage": "COVERAGE=true karma start --single-run",
+    "test": "npm run lint && karma start --single-run",
+    "lint": "eslint ./",
+    "docs-build": "babel-node tools/build-cli.js --docs-only"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib/"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "playground",
+    "prototype"
+  ],
+  "author": "alexkval@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.1.10",
+    "babel-core": "^5.1.10",
+    "babel-eslint": "^3.0.1",
+    "babel-loader": "^5.0.0",
+    "brfs": "^1.4.0",
+    "chai": "^3.0.0",
+    "child-process-promise": "^1.0.1",
+    "colors": "^1.0.3",
+    "es5-shim": "^4.1.0",
+    "eslint": "0.23.0",
+    "eslint-plugin-babel": "^1.0.0",
+    "eslint-plugin-mocha": "^0.2.2",
+    "eslint-plugin-react": "^2.1.0",
+    "fs-extra": "^0.19.0",
+    "fs-promise": "^0.3.1",
+    "glob": "^5.0.10",
+    "isparta-loader": "^0.2.0",
+    "json-loader": "^0.5.1",
+    "karma": "~0.12.32",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-cli": "0.0.4",
+    "karma-coverage": "^0.4.2",
+    "karma-coveralls": "^1.1.0",
+    "karma-mocha": "~0.1.1",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-sinon": "^1.0.3",
+    "karma-sinon-chai": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.4",
+    "karma-webpack": "^1.5.0",
+    "lodash": "^3.5.0",
+    "mocha": "^2.2.1",
+    "mt-changelog": "^0.5.2",
+    "node-libs-browser": "^0.5.2",
+    "rimraf": "^2.3.2",
+    "semver": "^4.3.4",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.7.0",
+    "webpack": "^1.7.2",
+    "yargs": "^3.5.4"
+  }
+}
