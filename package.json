@@ -19,7 +19,8 @@
     "docs-build": "babel-node tools/build-cli.js --docs-only",
     "patch": "babel-node Makefile.js patch",
     "minor": "babel-node Makefile.js minor",
-    "major": "babel-node Makefile.js major"
+    "major": "babel-node Makefile.js major",
+    "build-bower": "babel-node Makefile.js bower"
   },
   "main": "lib/index.js",
   "directories": {
@@ -36,7 +37,10 @@
     "playground",
     "prototype"
   ],
-  "author": "alexkval@gmail.com>",
+  "author": {
+    "name": "Alexander",
+    "email": "alexkval@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.1.10",
@@ -69,7 +73,7 @@
     "karma-sinon-chai": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.4",
     "karma-webpack": "^1.5.0",
-    "lodash": "^3.5.0",
+    "lodash": "^3.10.0",
     "mocha": "^2.2.1",
     "mt-changelog": "^0.5.2",
     "node-libs-browser": "^0.5.2",
