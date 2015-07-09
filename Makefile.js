@@ -1,9 +1,10 @@
-/* globals cat, config, cp, ls, popd, pushd, rm, target, exec, exit */
+/* globals cat, config, cp, ls, mkdir, popd, pushd, rm, target, exec, exit */
 /* eslint curly: 0 */
 import 'colors';
 import 'shelljs/make';
 import path from 'path';
 import semver from 'semver';
+import _ from 'lodash';
 
 // do not die on errors
 config.fatal = false;
@@ -15,6 +16,12 @@ const bowerRoot = path.join(__dirname, 'amd/');
 
 const packagePath = path.join(__dirname, 'package.json');
 const changelog = path.join(__dirname, 'CHANGELOG.md');
+
+const license = path.join(__dirname, 'LICENSE');
+const readme = path.join(__dirname, 'bowerTmpl', 'README.md');
+const bowerTemplate = path.join(__dirname, 'bowerTmpl', 'bower.json');
+const bowerJson = path.join(bowerRoot, 'bower.json');
+
 
 const clOptions = {};
 function parseArgs(argsArray) {
@@ -151,36 +158,15 @@ function release(releaseType, preid) {
 }
 
 function bowerBuild() {
-  // const packagePath = path.join(repoRoot, 'package.json');
-  // const bowerTemplate = path.join(__dirname, 'bower.json');
-  // const bowerJson = path.join(bowerRoot, 'bower.json');
-  //
-  // const readme = path.join(__dirname, 'README.md');
-  // const license = path.join(repoRoot, 'LICENSE');
-  //
-  // function bowerConfig() {
-  //   return Promise.all([
-  //     fsp.readFile(packagePath)
-  //       .then(json => JSON.parse(json)),
-  //     fsp.readFile(bowerTemplate)
-  //       .then(template => _.template(template))
-  //   ])
-  //   .then(([pkg, template]) => template({ pkg }))
-  //   .then(config => fsp.writeFile(bowerJson, config));
-  // }
-  //
-  // export default function BuildBower() {
-  //   console.log('Building: '.cyan + 'bower module'.green);
-  //
-  //   return exec(`rimraf ${bowerRoot}`)
-  //     .then(() => fsp.mkdirs(bowerRoot))
-  //     .then(() => Promise.all([
-  //       bowerConfig(),
-  //       copy(readme, bowerRoot),
-  //       copy(license, bowerRoot)
-  //     ]))
-  //     .then(() => console.log('Built: '.cyan + 'bower module'.green));
-  // }
+  console.log('Building: '.cyan + 'bower module'.green);
+  rm('-rf', bowerRoot);
+  mkdir('-p', bowerRoot);
+  const pkg = JSON.parse(cat(packagePath));
+  const template = _.template(cat(bowerTemplate));
+  template({ pkg }).to(bowerJson);
+  cp(readme, bowerRoot);
+  cp(license, bowerRoot);
+  console.log('Built: '.cyan + 'bower module'.green);
 }
 
 target.patch = (argsArray) => {
@@ -203,7 +189,7 @@ target.major = (argsArray) => {
 //   release('patch', 'alpha');
 // };
 
-target.bowerBuild = (argsArray) => {
+target.bower = (argsArray) => {
   parseArgs(argsArray);
   bowerBuild();
 };
@@ -218,6 +204,6 @@ Usage: babel-node Makefile.js patch|minor|major -- [-n|--dry-run] [-v|--verbose]
   babel-node Makefile.js patch -- -n -v => Release dry run with verbose output
 
 or
-Usage: babel-node Makefile.js bowerBuild -- [-n|--dry-run] [-v|--verbose]
+Usage: babel-node Makefile.js bower -- [-n|--dry-run] [-v|--verbose]
   `);
 };
