@@ -21,8 +21,6 @@ const clOptions = {};
 function parseArgs(argsArray) {
   if (!argsArray) return;
 
-  console.log(argsArray);
-
   clOptions.dryRun = argsArray.includes('-n') || argsArray.includes('--dry-run');
   clOptions.verbose = argsArray.includes('-v') || argsArray.includes('--verbose');
 
@@ -36,8 +34,6 @@ function printErrorAndExit(error) {
 
 function run(command) {
   const { code, output } = exec(command, {silent: !clOptions.verbose});
-  // console.log('code', code);
-  // console.log('output', output);
   if (code !== 0) printErrorAndExit(output);
   return output;
 }
@@ -60,15 +56,15 @@ function release(releaseType, preid) {
   if (releaseType === undefined) printErrorAndExit('Must specify version bump type');
 
   // ensure git repo has no pending changes
-  // if (exec('git diff-index --name-only HEAD --').output.length) {
-  //   printErrorAndExit('Git repository must be clean');
-  // }
+  if (exec('git diff-index --name-only HEAD --').output.length) {
+    printErrorAndExit('Git repository must be clean');
+  }
   console.info('No pending changes'.cyan);
 
   // ensure git repo last version is fetched
-  // if (/\[behind (.*)\]/.test(exec('git fetch').output)) {
-  //   printErrorAndExit(`Your repo is behind by ${RegExp.$1} commits`);
-  // }
+  if (/\[behind (.*)\]/.test(exec('git fetch').output)) {
+    printErrorAndExit(`Your repo is behind by ${RegExp.$1} commits`);
+  }
   console.info('Current with latest changes from remote'.cyan);
 
   // check linting
@@ -96,9 +92,9 @@ function release(releaseType, preid) {
   if (preid) {
     newVersion = semver.inc(newVersion, 'pre', preid);
   }
-  //
-  // npmjson.version = newVersion;
-  // `${JSON.stringify(npmjson, null, 2)}\n`.to(packagePath);
+
+  npmjson.version = newVersion;
+  `${JSON.stringify(npmjson, null, 2)}\n`.to(packagePath);
 
   console.log('Version changed from '.cyan + oldVersion.green + ' to '.cyan + newVersion.green);
   safeRun(`git add ${packagePath}`);
@@ -175,3 +171,14 @@ target.major = (argsArray) => {
 //   parseArgs(argsArray);
 //   release('patch', 'alpha');
 // };
+
+target.all = () => {
+  console.log(`
+Usage: babel-node Makefile.js patch|minor|major -- [-n|--dry-run] [-v|--verbose]
+
+  babel-node Makefile.js minor => Release with minor version bump
+  babel-node Makefile.js major => Release with major version bump
+  babel-node Makefile.js major -- -n    => Release dry run with patch version bump
+  babel-node Makefile.js patch -- -n -v => Release dry run with verbose output
+  `);
+};
