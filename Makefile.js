@@ -15,7 +15,6 @@ const bowerRoot = path.join(__dirname, 'amd/');
 
 const packagePath = path.join(__dirname, 'package.json');
 const changelog = path.join(__dirname, 'CHANGELOG.md');
-const license = path.join(__dirname, 'LICENSE');
 
 const clOptions = {};
 function parseArgs(argsArray) {
@@ -137,7 +136,6 @@ function release(releaseType, preid) {
   pushd(tmpBowerRepo);
   rm('-rf', ls(tmpBowerRepo).filter(file => file !== '.git')); // delete all but `.git` dir
   cp('-R', bowerRoot, tmpBowerRepo);
-  cp(license, tmpBowerRepo);
   safeRun('git add -A .');
   safeRun(`git commit -m "Release ${vVersion}"`);
   gitTagAndPush(vVersion);
