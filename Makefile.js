@@ -100,15 +100,15 @@ function release(releaseType, preid) {
 
   // npm run build
   console.log('Running: '.cyan + 'build'.green);
-  // const res = exec('npm run build', {silent: !clOptions.verbose});
-  // if (res.code !== 0) {
-  //   // revert and exit
-  //   console.log('Build failed, reverting version bump'.red);
-  //   run('git reset HEAD .');
-  //   run('git checkout package.json');
-  //   console.log('Version bump reverted'.red);
-  //   printErrorAndExit(res.output);
-  // }
+  const res = exec('npm run build', {silent: !clOptions.verbose});
+  if (res.code !== 0) {
+    // revert and exit
+    console.log('Build failed, reverting version bump'.red);
+    run('git reset HEAD .');
+    run('git checkout package.json');
+    console.log('Version bump reverted'.red);
+    printErrorAndExit(res.output);
+  }
   console.log('Completed: '.cyan + 'build'.green);
 
   // generate changelog
