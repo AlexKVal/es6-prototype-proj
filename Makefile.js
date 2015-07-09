@@ -67,15 +67,15 @@ function release(releaseType, preid) {
   console.info('Current with latest changes from remote'.cyan);
 
   // check linting
-  // console.log('Running: '.cyan + 'eslint'.green);
-  // run('npm run lint');
-  // console.log('Completed: '.cyan + 'eslint'.green);
+  console.log('Running: '.cyan + 'eslint'.green);
+  run('npm run lint');
+  console.log('Completed: '.cyan + 'eslint'.green);
 
   // check tests
-  // console.log('Running: '.cyan + 'tests'.green);
-  // run('karma start --single-run');
-  // run('npm run test-only');
-  // console.log('Completed: '.cyan + 'tests'.green);
+  console.log('Running: '.cyan + 'tests'.green);
+  run('karma start --single-run');
+  run('npm run test-only');
+  console.log('Completed: '.cyan + 'tests'.green);
 
   // version bump
   const npmjson = JSON.parse(cat(packagePath));
@@ -150,6 +150,39 @@ function release(releaseType, preid) {
   console.log('Version '.cyan + `v${newVersion}`.green + ' released!'.cyan);
 }
 
+function bowerBuild() {
+  // const packagePath = path.join(repoRoot, 'package.json');
+  // const bowerTemplate = path.join(__dirname, 'bower.json');
+  // const bowerJson = path.join(bowerRoot, 'bower.json');
+  //
+  // const readme = path.join(__dirname, 'README.md');
+  // const license = path.join(repoRoot, 'LICENSE');
+  //
+  // function bowerConfig() {
+  //   return Promise.all([
+  //     fsp.readFile(packagePath)
+  //       .then(json => JSON.parse(json)),
+  //     fsp.readFile(bowerTemplate)
+  //       .then(template => _.template(template))
+  //   ])
+  //   .then(([pkg, template]) => template({ pkg }))
+  //   .then(config => fsp.writeFile(bowerJson, config));
+  // }
+  //
+  // export default function BuildBower() {
+  //   console.log('Building: '.cyan + 'bower module'.green);
+  //
+  //   return exec(`rimraf ${bowerRoot}`)
+  //     .then(() => fsp.mkdirs(bowerRoot))
+  //     .then(() => Promise.all([
+  //       bowerConfig(),
+  //       copy(readme, bowerRoot),
+  //       copy(license, bowerRoot)
+  //     ]))
+  //     .then(() => console.log('Built: '.cyan + 'bower module'.green));
+  // }
+}
+
 target.patch = (argsArray) => {
   parseArgs(argsArray);
   release('patch');
@@ -170,6 +203,11 @@ target.major = (argsArray) => {
 //   release('patch', 'alpha');
 // };
 
+target.bowerBuild = (argsArray) => {
+  parseArgs(argsArray);
+  bowerBuild();
+};
+
 target.all = () => {
   console.log(`
 Usage: babel-node Makefile.js patch|minor|major -- [-n|--dry-run] [-v|--verbose]
@@ -178,5 +216,8 @@ Usage: babel-node Makefile.js patch|minor|major -- [-n|--dry-run] [-v|--verbose]
   babel-node Makefile.js major => Release with major version bump
   babel-node Makefile.js major -- -n    => Release dry run with patch version bump
   babel-node Makefile.js patch -- -n -v => Release dry run with verbose output
+
+or
+Usage: babel-node Makefile.js bowerBuild -- [-n|--dry-run] [-v|--verbose]
   `);
 };
