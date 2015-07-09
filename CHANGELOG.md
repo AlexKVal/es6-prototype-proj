@@ -1,3 +1,10 @@
+v0.0.10 - Thu, 09 Jul 2015 17:23:13 GMT
+---------------------------------------
+
+- [24daccb](../../commit/24daccb) [changed] added bower release and bugs field into package.json
+
+
+
 v0.0.9 - Thu, 09 Jul 2015 17:19:00 GMT
 --------------------------------------
 
