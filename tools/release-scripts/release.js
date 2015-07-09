@@ -103,8 +103,9 @@ function revertAndThrow(err) {
     .then(() => { throw err; });
 }
 
-preConditions()
-  .then(argv.docs ? lint : test)
+// preConditions()
+  // .then(argv.docs ? lint : test)
+Promise.resolve()
   .then(versionBump(versionBumpOptions))
   .then(v => { version = v; })
   .then(() => prepareRepo().catch(err => revertAndThrow(err)))

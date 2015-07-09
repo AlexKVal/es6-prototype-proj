@@ -5,4 +5,3 @@ var path = require('path');
 var nodeModulesBin = path.resolve(__dirname, '../node_modules/.bin');
 process.env.PATH = nodeModulesBin + ':' + process.env.PATH;
 require('./release-scripts/release');
-
