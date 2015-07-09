@@ -125,10 +125,10 @@ function release(releaseType, preid) {
   gitTagAndPush(vVersion);
   console.log('Tagged: '.cyan + vVersion.green);
 
-  // npm
-  // console.log('Releasing: '.cyan + 'npm package'.green);
-  // safeRun('npm publish');
-  // console.log('Released: '.cyan + 'npm package'.green);
+  npm
+  console.log('Releasing: '.cyan + 'npm package'.green);
+  safeRun('npm publish');
+  console.log('Released: '.cyan + 'npm package'.green);
 
   // bower
   // console.log('Releasing: '.cyan + 'bower package'.green);
