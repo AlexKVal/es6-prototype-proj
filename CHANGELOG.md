@@ -1,3 +1,10 @@
+v0.0.11 - Thu, 09 Jul 2015 17:28:43 GMT
+---------------------------------------
+
+- [0bf6140](../../commit/0bf6140) [changed] removed unneseccary copying of license for bower
+
+
+
 v0.0.10 - Thu, 09 Jul 2015 17:23:13 GMT
 ---------------------------------------
 
