@@ -1,0 +1,15 @@
+{
+  "name": "<%= pkg.name %>",
+  "version": "<%= pkg.version %>",
+  "homepage": "<%= pkg.homepage %>",
+  "author": <%= JSON.stringify(pkg.author) %>,
+  "license": "<%= pkg.license %>",
+  "main": "<%= pkg.main %>",
+  "bugs": <%= JSON.stringify(pkg.bugs) %>,
+  "keywords": [
+    <%= _.map(pkg.keywords, function(keyword) { return '"' + keyword + '"' }).join(',\n    ')%>
+  ],
+  "ignore": [
+    "**/.*"
+  ]
+}
