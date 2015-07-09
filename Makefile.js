@@ -73,16 +73,10 @@ function release(releaseType, preid) {
   }
   console.info('Current with latest changes from remote'.cyan);
 
-  // check linting
-  console.log('Running: '.cyan + 'eslint'.green);
-  run('npm run lint');
-  console.log('Completed: '.cyan + 'eslint'.green);
-
-  // check tests
-  console.log('Running: '.cyan + 'tests'.green);
-  run('karma start --single-run');
-  run('npm run test-only');
-  console.log('Completed: '.cyan + 'tests'.green);
+  // check linting and tests
+  console.log('Running: '.cyan + 'linting and tests'.green);
+  run('npm run test');
+  console.log('Completed: '.cyan + 'linting and tests'.green);
 
   // version bump
   const npmjson = JSON.parse(cat(packagePath));
