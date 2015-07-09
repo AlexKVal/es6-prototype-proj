@@ -7,6 +7,9 @@
     "url": "alexkval/es6-prototype-proj"
   },
   "homepage": "https://github.com/alexkval/es6-prototype-proj",
+  "bugs": {
+    "url": "https://github.com/alexkval/es6-prototype-proj/issues"
+  },
   "scripts": {
     "build": "babel-node tools/build-cli.js",
     "test-watch": "karma start",

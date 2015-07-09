@@ -131,23 +131,23 @@ function release(releaseType, preid) {
   console.log('Released: '.cyan + 'npm package'.green);
 
   // bower
-  // console.log('Releasing: '.cyan + 'bower package'.green);
-  // rm('-rf', tmpBowerRepo);
-  // run(`git clone ${bowerRepo} ${tmpBowerRepo}`);
-  // pushd(tmpBowerRepo);
-  // rm('-rf', ls(tmpBowerRepo).filter(file => file !== '.git')); // delete all but `.git` dir
-  // cp('-R', bowerRoot, tmpBowerRepo);
-  // cp(license, tmpBowerRepo);
-  // safeRun('git add -A .');
-  // safeRun(`git commit -m "Release ${vVersion}"`);
-  // gitTagAndPush(vVersion);
-  // popd();
-  // if (clOptions.dryRun) {
-  //   console.log(`[rm -rf ${tmpBowerRepo}]`.grey, 'DRY RUN'.magenta);
-  // } else {
-  //   rm('-rf', tmpBowerRepo);
-  // }
-  // console.log('Released: '.cyan + 'bower package'.green);
+  console.log('Releasing: '.cyan + 'bower package'.green);
+  rm('-rf', tmpBowerRepo);
+  run(`git clone ${bowerRepo} ${tmpBowerRepo}`);
+  pushd(tmpBowerRepo);
+  rm('-rf', ls(tmpBowerRepo).filter(file => file !== '.git')); // delete all but `.git` dir
+  cp('-R', bowerRoot, tmpBowerRepo);
+  cp(license, tmpBowerRepo);
+  safeRun('git add -A .');
+  safeRun(`git commit -m "Release ${vVersion}"`);
+  gitTagAndPush(vVersion);
+  popd();
+  if (clOptions.dryRun) {
+    console.log(`[rm -rf ${tmpBowerRepo}]`.grey, 'DRY RUN'.magenta);
+  } else {
+    rm('-rf', tmpBowerRepo);
+  }
+  console.log('Released: '.cyan + 'bower package'.green);
 
   console.log('Version '.cyan + `v${newVersion}`.green + ' released!'.cyan);
 }
