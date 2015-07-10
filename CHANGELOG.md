@@ -1,3 +1,11 @@
+v0.0.18 - Fri, 10 Jul 2015 17:40:55 GMT
+---------------------------------------
+
+- [ff40f15](../../commit/ff40f15) [changed] added 'release-script' dev dependency
+- [ef0551a](../../commit/ef0551a) [changed] yet one
+
+
+
 v0.0.17 - Fri, 10 Jul 2015 17:16:46 GMT
 ---------------------------------------
 
