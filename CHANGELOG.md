@@ -1,3 +1,10 @@
+v0.0.16 - Fri, 10 Jul 2015 17:03:58 GMT
+---------------------------------------
+
+- [1bb7c0c](../../commit/1bb7c0c) [changed] added bower repo url into package.json
+
+
+
 v0.0.15 - Fri, 10 Jul 2015 17:01:57 GMT
 ---------------------------------------
 
