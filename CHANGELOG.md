@@ -1,3 +1,15 @@
+v0.0.13 - Fri, 10 Jul 2015 16:41:34 GMT
+---------------------------------------
+
+- [5322e34](../../commit/5322e34) [changed] tools => 'release-script' and 'scripts/bower-prepare.js'
+- [35aabff](../../commit/35aabff) [added] bowerTmpl
+- [ea3f08b](../../commit/ea3f08b) [fixed] changed testing and added bowerTmpl
+- [d4f522f](../../commit/d4f522f) [added] npm run bower-build
+- [9246143](../../commit/9246143) [added] author name and email and lodash dev dependency
+- [833508e](../../commit/833508e) [changed] add linting and testing to release
+
+
+
 v0.0.12 - Thu, 09 Jul 2015 17:31:16 GMT
 ---------------------------------------
 
