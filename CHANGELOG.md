@@ -1,3 +1,10 @@
+v0.0.15 - Fri, 10 Jul 2015 17:01:57 GMT
+---------------------------------------
+
+- [452e26e](../../commit/452e26e) [changed] dummy change to check new release version
+
+
+
 v0.0.14 - Fri, 10 Jul 2015 16:55:22 GMT
 ---------------------------------------
 
