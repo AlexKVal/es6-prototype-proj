@@ -6,6 +6,7 @@
     "type": "git",
     "url": "alexkval/es6-prototype-proj"
   },
+  "bowerRepo": "git@github.com:alexkval/es6-prototype-proj-bower.git",
   "homepage": "https://github.com/alexkval/es6-prototype-proj",
   "bugs": {
     "url": "https://github.com/alexkval/es6-prototype-proj/issues"
