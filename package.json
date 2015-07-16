@@ -49,6 +49,7 @@
     "brfs": "^1.4.0",
     "chai": "^3.0.0",
     "colors": "^1.0.3",
+    "conventional-changelog": "0.1.0-beta.1",
     "es5-shim": "^4.1.0",
     "eslint": "0.23.0",
     "eslint-plugin-babel": "^1.0.0",
