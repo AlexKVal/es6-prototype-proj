@@ -1,3 +1,10 @@
+v0.0.69 - Sun, 09 Aug 2015 21:19:01 GMT
+---------------------------------------
+
+- [a7f1ef4](../../commit/a7f1ef4) [added] 'npm run release' script
+- [756112a](../../commit/756112a) [added] for checking
+
+
 v0.0.68 - Sun, 09 Aug 2015 20:55:31 GMT
 ---------------------------------------
 
