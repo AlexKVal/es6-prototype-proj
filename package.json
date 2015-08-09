@@ -16,6 +16,7 @@
     "test-coverage": "COVERAGE=true karma start --single-run",
     "test": "npm run lint && karma start --single-run",
     "lint": "eslint .",
+    "release": "release",
     "patch": "release patch",
     "minor": "release minor",
     "major": "release major",
