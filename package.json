@@ -1,6 +1,6 @@
 {
   "name": "es6-prototype-proj",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "ES6 playgroung prototyping project",
   "repository": {
     "type": "git",
@@ -81,6 +81,6 @@
   "release-script": {
     "bowerRepo": "git@github.com:alexkval/es6-prototype-proj-bower.git",
     "githubOwner": "Custom name",
-    "githubToken": "aa464978a9ba6672fe713d7d9c13324f4c94b85f"
+    "githubToken": "014e5f97db0ea692842cf78bb040d5a5b76280a3"
   }
 }
