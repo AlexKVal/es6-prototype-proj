@@ -1,3 +1,10 @@
+v0.0.68 - Sun, 09 Aug 2015 20:55:31 GMT
+---------------------------------------
+
+- [f33f391](../../commit/f33f391) [fixed] npm run build
+- [992af79](../../commit/992af79) [added] testing and building back. full test.
+
+
 v0.0.67 - Sun, 09 Aug 2015 20:51:12 GMT
 ---------------------------------------
 
