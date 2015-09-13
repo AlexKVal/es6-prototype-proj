@@ -1,6 +1,6 @@
 {
   "name": "es6-prototype-proj",
-  "version": "0.0.82",
+  "version": "0.0.87",
   "description": "ES6 playgroung prototyping project",
   "repository": {
     "type": "git",
@@ -72,12 +72,14 @@
     "mocha": "^2.2.1",
     "mt-changelog": "^0.6.1",
     "node-libs-browser": "^0.5.2",
-    "release-script": "^0.2.0",
+    "release-script": "^0.2.7",
     "shelljs": "^0.5.1",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.7.0",
     "webpack": "^1.7.2",
     "yargs": "^3.15.0"
   },
-  "release-script": {}
+  "release-script": {
+    "altPkgRootFolder": "lib"
+  }
 }

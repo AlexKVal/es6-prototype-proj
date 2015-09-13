@@ -1,3 +1,38 @@
+v0.0.87 - Mon, 14 Sep 2015 15:29:24 GMT
+---------------------------------------
+
+- [d9f1e06](../../commit/d9f1e06) [changed] `release-script` new version set for 'altPkgRootFolder' option to work
+
+
+
+v0.0.86 - Mon, 14 Sep 2015 15:01:15 GMT
+---------------------------------------
+
+- [161cfaa](../../commit/161cfaa) [changed] change for checking
+
+
+
+v0.0.85 - Mon, 14 Sep 2015 14:52:28 GMT
+---------------------------------------
+
+- [095173a](../../commit/095173a) [changed] just for checking
+
+
+
+v0.0.84 - Mon, 14 Sep 2015 14:48:41 GMT
+---------------------------------------
+
+- [cb81396](../../commit/cb81396) [added] check for a custom package root folder publishing
+
+
+
+v0.0.83 - Sun, 13 Sep 2015 18:00:50 GMT
+---------------------------------------
+
+- [b5b4602](../../commit/b5b4602) [changed] noop
+
+
+
 v0.0.82 - Sun, 09 Aug 2015 22:18:36 GMT
 ---------------------------------------
 
