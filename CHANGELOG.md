@@ -1,3 +1,10 @@
+v0.0.87 - Mon, 14 Sep 2015 15:29:24 GMT
+---------------------------------------
+
+- [d9f1e06](../../commit/d9f1e06) [changed] `release-script` new version set for 'altPkgRootFolder' option to work
+
+
+
 v0.0.86 - Mon, 14 Sep 2015 15:01:15 GMT
 ---------------------------------------
 
