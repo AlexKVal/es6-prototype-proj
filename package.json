@@ -79,5 +79,7 @@
     "webpack": "^1.7.2",
     "yargs": "^3.15.0"
   },
-  "release-script": {}
+  "release-script": {
+    "altPkgRootFolder": "lib"
+  }
 }
