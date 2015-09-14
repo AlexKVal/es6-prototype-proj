@@ -1,3 +1,10 @@
+v0.0.84 - Mon, 14 Sep 2015 14:48:41 GMT
+---------------------------------------
+
+- [cb81396](../../commit/cb81396) [added] check for a custom package root folder publishing
+
+
+
 v0.0.83 - Sun, 13 Sep 2015 18:00:50 GMT
 ---------------------------------------
 
