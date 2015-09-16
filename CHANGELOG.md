@@ -1,3 +1,12 @@
+v0.0.91 - Wed, 16 Sep 2015 16:32:09 GMT
+---------------------------------------
+
+- [eee1b14](../../commit/eee1b14) [changed] documents
+- [ad0fc60](../../commit/ad0fc60) [changed] build step is in test step as in R-B
+- [4acc908](../../commit/4acc908) [changed] documents.
+
+
+
 v0.0.90-docs.0 - Wed, 16 Sep 2015 12:26:51 GMT
 ----------------------------------------------
 
