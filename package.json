@@ -11,7 +11,7 @@
     "url": "https://github.com/alexkval/es6-prototype-proj/issues"
   },
   "scripts": {
-    "build": "babel src --out-dir=lib && webpack --bail && webpack --bail -p && npm run bower-prepare",
+    "build": "babel src --out-dir=lib && webpack --bail && webpack --bail -p && npm run bower-prepare && npm run docs-build",
     "test-watch": "karma start",
     "test-coverage": "COVERAGE=true karma start --single-run",
     "test": "exit 0;",
@@ -20,7 +20,8 @@
     "patch": "release patch",
     "minor": "release minor",
     "major": "release major",
-    "bower-prepare": "babel-node scripts/bower-prepare.js"
+    "bower-prepare": "babel-node scripts/bower-prepare.js",
+    "docs-build": "babel-node scripts/docs-build.js"
   },
   "main": "lib/index.js",
   "directories": {
@@ -81,6 +82,7 @@
   },
   "release-script": {
     "altPkgRootFolder": "lib",
-    "bowerRepo": "git@github.com:AlexKVal/es6-prototype-proj-bower.git"
+    "bowerRepo": "git@github.com:AlexKVal/es6-prototype-proj-bower.git",
+    "docsRepo": "git@github.com:AlexKVal/es6-prototype-proj.github.io.git"
   }
 }
