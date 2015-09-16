@@ -81,6 +81,6 @@
   },
   "release-script": {
     "altPkgRootFolder": "lib",
-    "bowerRepo": "https://github.com/AlexKVal/es6-prototype-proj-bower"
+    "bowerRepo": "git@github.com:AlexKVal/es6-prototype-proj-bower.git"
   }
 }
