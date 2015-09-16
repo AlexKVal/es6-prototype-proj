@@ -1,3 +1,14 @@
+v0.0.87 - Wed, 16 Sep 2015 09:33:30 GMT
+---------------------------------------
+
+- [ab04b38](../../commit/ab04b38) [added] bower repo releasing
+- [73405e0](../../commit/73405e0) [changed] pre-beta
+- [1222db3](../../commit/1222db3) [changed] another alpha
+- [3792569](../../commit/3792569) [changed] alpha pre
+- [90f2126](../../commit/90f2126) [changed] noop
+
+
+
 v0.0.87-beta.0 - Tue, 15 Sep 2015 15:51:14 GMT
 ----------------------------------------------
 
