@@ -1,3 +1,10 @@
+v0.0.89 - Wed, 16 Sep 2015 09:35:55 GMT
+---------------------------------------
+
+- [7ba355b](../../commit/7ba355b) [changed] bower repo way to ssh. the password has not to be asked.
+
+
+
 v0.0.88 - Wed, 16 Sep 2015 09:34:05 GMT
 ---------------------------------------
 
