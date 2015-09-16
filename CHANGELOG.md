@@ -1,3 +1,12 @@
+v0.0.92 - Wed, 16 Sep 2015 16:55:16 GMT
+---------------------------------------
+
+- [5ba97e4](../../commit/5ba97e4) [changed] And this has to be Release
+- [fb56ccd](../../commit/fb56ccd) [changed] remove 'build' step from 'test' step
+- [99b6265](../../commit/99b6265) [added] docs pre-release statement
+
+
+
 v0.0.91 - Wed, 16 Sep 2015 16:32:09 GMT
 ---------------------------------------
 
