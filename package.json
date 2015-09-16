@@ -80,6 +80,7 @@
     "yargs": "^3.15.0"
   },
   "release-script": {
-    "altPkgRootFolder": "lib"
+    "altPkgRootFolder": "lib",
+    "bowerRepo": "https://github.com/AlexKVal/es6-prototype-proj-bower"
   }
 }
