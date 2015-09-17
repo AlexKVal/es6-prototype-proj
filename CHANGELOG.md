@@ -1,3 +1,11 @@
+v0.0.95 - Thu, 17 Sep 2015 10:56:17 GMT
+---------------------------------------
+
+- [9f5dd92](../../commit/9f5dd92) [changed] check new option
+- [39a8fcd](../../commit/39a8fcd) [changed] update dev.dep
+
+
+
 v0.0.93 - Thu, 17 Sep 2015 06:06:53 GMT
 ---------------------------------------
 
