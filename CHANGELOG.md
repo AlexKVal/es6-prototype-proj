@@ -1,3 +1,14 @@
+v0.101.1 - Thu, 19 Nov 2015 07:31:14 GMT
+----------------------------------------
+
+- [24ee38e](../../commit/24ee38e) [changed] sedond
+- [720d07a](../../commit/720d07a) [changed] in first repo
+- [f95c6e2](../../commit/f95c6e2) [changed] in second repo
+- [ff4954f](../../commit/ff4954f) [changed] in second repo
+- [9077bee](../../commit/9077bee) [changed] run release process in dry-run mode by default
+
+
+
 v0.0.95 - Thu, 17 Sep 2015 10:56:17 GMT
 ---------------------------------------
 
