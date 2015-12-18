@@ -14,6 +14,7 @@
     "build": "babel src --out-dir=lib && webpack --bail && webpack --bail -p && npm run bower-prepare && npm run docs-build",
     "test-watch": "karma start",
     "test-coverage": "COVERAGE=true karma start --single-run",
+    "test": "npm run lint",
     "lint": "eslint .",
     "release": "release",
     "patch": "release patch",
